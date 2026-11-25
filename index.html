@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MusicGPT — AI Music Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">♪</span><span>Music<span>GPT</span></span></div>
+    <nav>
+      <a class="active" href="#"><span>✦</span> Create</a>
+      <a href="#"><span>◉</span> Library</a>
+      <a href="#"><span>↗</span> Discover</a>
+    </nav>
+    <div class="side-card">
+      <div class="mini-title">CREATE YOUR SOUND</div>
+      <p>Turn a simple idea into a complete song.</p>
+      <button onclick="document.getElementById('prompt').focus()">Start creating</button>
+    </div>
+    <div class="user"><div class="avatar">S</div><div><b>Sila</b><small>Free plan</small></div><span>⋯</span></div>
+  </aside>
+
+  <main>
+    <header>
+      <div class="mobile-brand">Music<span>GPT</span></div>
+      <div class="header-actions"><button class="icon">⌕</button><button class="upgrade">Upgrade</button></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">AI MUSIC STUDIO</div>
+      <h1>Make music from <span>imagination.</span></h1>
+      <p>Describe the song you hear in your head. MusicGPT turns your idea into music.</p>
+    </section>
+
+    <section class="composer">
+      <label for="prompt">Describe your song</label>
+      <textarea id="prompt" maxlength="1200" placeholder="Example: A powerful Swahili worship song about God's faithfulness, warm piano, cinematic strings, emotional male vocals, building into a big joyful chorus..."></textarea>
+      <div class="controls">
+        <div class="field"><span>Genre</span><select id="genre"><option>Worship</option><option>Afrobeat</option><option>Bongo Flava</option><option>Pop</option><option>Hip Hop</option><option>R&B</option><option>Gospel</option><option>Lo-fi</option><option>Cinematic</option></select></div>
+        <div class="field"><span>Mood</span><select id="mood"><option>Uplifting</option><option>Peaceful</option><option>Epic</option><option>Emotional</option><option>Joyful</option><option>Dark</option><option>Romantic</option></select></div>
+        <div class="field"><span>Length</span><select id="duration"><option value="30">30 sec</option><option value="60">1 min</option><option value="120">2 min</option><option value="180">3 min</option></select></div>
+        <div class="field"><span>Voice</span><select id="vocals"><option value="male">Male vocal</option><option value="female">Female vocal</option><option value="duet">Duet</option><option value="instrumental">Instrumental</option></select></div>
+      </div>
+      <button id="generate" class="generate"><span>✦</span> Generate music</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="recent">
+      <div class="section-head"><h2>Recent creations</h2><button>View all →</button></div>
+      <div id="history" class="tracks"></div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
